@@ -9,7 +9,7 @@ public class Testing {
     @Test
     public void ElementsAddedTest() {
         anagramChecker.fillMap(new ArrayList<>(Arrays.asList("Word1", "Word2", "OWrD2")));
-        anagramChecker.fillMap(new ArrayList<>(Arrays.asList("2drow", "njigruirg")));
+        anagramChecker.fillMap(new ArrayList<>(Arrays.asList("2drow", "njigruirg", "word23", "word32")));
 
         //--Check if elements are added
         //Assertions.assertEquals(anagramChecker.anagramList.size(), 3);
@@ -19,5 +19,6 @@ public class Testing {
 
         //--Check if string is anagram of list
         anagramChecker.isAnagram("word2");
+        Assertions.assertFalse(anagramChecker.isAnagram("word3"));
     }
 }
